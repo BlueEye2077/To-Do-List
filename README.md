@@ -1,4 +1,4 @@
-# ✅ Terminal To-Do List Manager
+# ✅ Terminal To Do List Manager
 
 A minimalist, interactive, and colorful terminal-based To-Do List manager built with Python and SQLite.
 
