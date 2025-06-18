@@ -71,9 +71,3 @@ The SQLite file `data.db` will be automatically created inside the `To Do List` 
 ## 👨‍💻 Author
 
 **BlueEye** – crafting terminal tools with style 🧠
-
----
-
-## 📃 License
-
-MIT License. See [LICENSE](LICENSE) for details.
