@@ -5,23 +5,16 @@ from emoji import emojize
 from random import randint
 
 
-
-
-
 def get_path():
-    current_path=os.path.dirname(sys.executable if getattr(sys,"frozen",False) else os.path.abspath(__file__))
-    while True:
-        if os.path.basename(current_path)=="To Do List":
-            return current_path
-        parent=os.path.dirname(current_path)
-        if os.path.basename(current_path)==os.path.basename(parent):
-            print("Error While Searching For The App Folder")
+    if getattr(sys, 'frozen', False):
+        return os.path.dirname(sys.executable)
+    else:
+        return os.path.dirname(__file__)
 
-        current_path=parent
-
-app_path=get_path()
+app_path= get_path()
 
 db=sqlite3.connect(os.path.join(app_path,"data.db"))
+print(app_path,"/data.db")
 cr=db.cursor()
 cr.execute("create table if not exists Tasks (id integer,Task string,Status bool) ")
 
